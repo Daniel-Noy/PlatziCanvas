@@ -1,0 +1,17 @@
+body{
+    font-size: 20px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: #7de5ff
+}
+
+.contenedor{
+    padding: 5px;
+    align-content: center;
+    text-align: center;
+}
+
+#canvas{
+    border: 2px solid rgb(19, 42, 253);
+}

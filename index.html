@@ -4,20 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>canvas</title>
 </head>
 <body>
-    <h1>Dibujando en canvas</h1>
-    <p>Cuantas lineas quieres
-        <input type="number" max="30" name="numero" id="txt_numero" placeholder="Elige el número">
-    </p>
-    <p>Elige el tamaño del lienzo
-        <input type="text" id="alto" placeholder="Altura">
-        <input type="text" id="ancho" placeholder="Ancho">
-    </p>
-    <p><input type="button" value="Dibujar" id="boton"></p>
+    <div class="contenedor">
+        <form id="formulario">
+            <h1>Dibujando en canvas</h1>
+            <p>Cuantas lineas quieres
+                <input type="number" max="30" name="numero" id="txt_numero" placeholder="Elige el número">
+            </p>
+            <p>Elige el tamaño del lienzo:</p>
+            <p>
+                <input type="number" id="ancho" placeholder="Ancho">
+                <input type="number" id="alto" placeholder="Alto">
+            </p>
+            <p><input type="button" value="Dibujar" id="boton"></p>
+        </form>
 
-    <canvas id="canvas" width="800" height="1200"></canvas>
+        <canvas id="canvas" width="300" height="300"></canvas>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
