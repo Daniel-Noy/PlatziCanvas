@@ -1,9 +1,6 @@
 let canvas = document.getElementById('canvas');
 let lienzo = canvas.getContext("2d");
 
-let txtAlto = document.getElementById("Altura")
-let txtAncho = document.getElementById("Ancho")
-
 let boton = document.getElementById("boton")
 let cuadroTexto = document.getElementById("txt_numero")
 
@@ -27,7 +24,6 @@ function dibujoPorClick(){
     let espacioHorizontal =  anchoLienzo / numeroLineas;
     let espacioVertical = altoLienzo / numeroLineas;
 
-    dimensiones()
 
     for (let l = 0; l < numeroLineas; l++) {
 
@@ -48,12 +44,4 @@ function dibujoPorClick(){
     dibujarLinea("green", 1, 1, 1, altoLienzo);
     dibujarLinea("green", 1, altoLienzo - 1, anchoLienzo, altoLienzo -1);
 
-}
-
-function dimensiones() {
-    let altura = txtAlto.value;
-    let anchura = txtAncho.value;
-
-    canvas.setAttribute('height', altura);
-    canvas.setAttribute('width', anchura)
 }
