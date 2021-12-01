@@ -4,6 +4,10 @@ let lienzo = canvas.getContext("2d");
 let boton = document.getElementById("boton")
 let cuadroTexto = document.getElementById("txt_numero")
 
+let ancho = document.getElementById('ancho');
+let alto = document.getElementById('alto');
+
+
 boton.addEventListener('click', dibujoPorClick)
 
 // Funcion para dibujar una linea recta
@@ -16,14 +20,23 @@ function dibujarLinea(color, x1, y1, x2, y2){
     lienzo.closePath();
 }
 
+function tamañoLienzo(){
+    let anchoLienzo = ancho.value;
+    let altoLienzo = alto.value
+
+    canvas.setAttribute('width', anchoLienzo + 'px');
+    canvas.setAttribute('height', altoLienzo + 'px');
+
+}
 function dibujoPorClick(){
+
+    tamañoLienzo()
 
     let anchoLienzo = canvas.width;
     let altoLienzo = canvas.height;
     let numeroLineas = cuadroTexto.value;
     let espacioHorizontal =  anchoLienzo / numeroLineas;
     let espacioVertical = altoLienzo / numeroLineas;
-
 
     for (let l = 0; l < numeroLineas; l++) {
 
@@ -39,9 +52,4 @@ function dibujoPorClick(){
     
         dibujarLinea("purple", xi, altoLienzo, anchoLienzo, yf);
     }
-
-    // Dibujando el borde
-    dibujarLinea("green", 1, 1, 1, altoLienzo);
-    dibujarLinea("green", 1, altoLienzo - 1, anchoLienzo, altoLienzo -1);
-
 }
