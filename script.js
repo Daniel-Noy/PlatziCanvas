@@ -20,15 +20,22 @@ function dibujarLinea(color, x1, y1, x2, y2){
     lienzo.closePath();
 }
 
+function tamañoLienzo(){
+    let anchoLienzo = ancho.value;
+    let altoLienzo = alto.value
+
+    canvas.setAttribute('width', anchoLienzo + 'px');
+    canvas.setAttribute('height', altoLienzo + 'px');
+}
 function dibujoPorClick(){
+
+    tamañoLienzo()
 
     let anchoLienzo = canvas.width;
     let altoLienzo = canvas.height;
     let numeroLineas = cuadroTexto.value;
     let espacioHorizontal =  anchoLienzo / numeroLineas;
     let espacioVertical = altoLienzo / numeroLineas;
-
-    tamañoLienzo();
 
     for (let l = 0; l < numeroLineas; l++) {
 
@@ -46,9 +53,3 @@ function dibujoPorClick(){
     }
 }
 
-function tamañoLienzo(){
-    let anchoLienzo = ancho.value;
-    let altoLienzo = alto.value
-
-    canvas.setAttribute('width', anchoLienzo + 'px')
-}
