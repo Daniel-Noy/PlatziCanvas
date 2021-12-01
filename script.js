@@ -21,12 +21,11 @@ function dibujarLinea(color, x1, y1, x2, y2){
 }
 
 function tamañoLienzo(){
-    let anchoLienzo = ancho.value;
-    let altoLienzo = alto.value
+    let anchoLienzo = `${ancho.value}px`;
+    let altoLienzo = `${alto.value}px`;
 
-    canvas.setAttribute('width', anchoLienzo + 'px');
-    canvas.setAttribute('height', altoLienzo + 'px');
-
+    canvas.setAttribute('width', anchoLienzo);
+    canvas.setAttribute('height', altoLienzo);
 }
 function dibujoPorClick(){
 
