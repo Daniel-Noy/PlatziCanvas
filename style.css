@@ -38,6 +38,6 @@ body{
 
 @media (max-width: 1000px) {
     [type="number"]{
-        width: 50%;
+        width: 20%;
     }
 }
