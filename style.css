@@ -2,6 +2,7 @@ body{
     font-size: 20px;
     font-family: sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     background-color: #7de5ff
 }
@@ -14,4 +15,23 @@ body{
 
 #canvas{
     border: 2px solid rgb(19, 42, 253);
+}
+
+[type="number"]{
+    width: 10%;
+    padding: 5px;
+
+    border-radius: 20px;
+    border: 0;
+
+    text-align: center;
+}
+
+[type="button"]{
+    padding: 10px;
+
+    border: 0;
+    border-radius: 20px;
+
+    font-size: 20px;
 }

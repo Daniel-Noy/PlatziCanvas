@@ -26,6 +26,7 @@ function tamañoLienzo(){
 
     canvas.setAttribute('width', anchoLienzo + 'px');
     canvas.setAttribute('height', altoLienzo + 'px');
+
 }
 function dibujoPorClick(){
 
