@@ -4,11 +4,14 @@ let lienzo = canvas.getContext("2d");
 let boton = document.getElementById("boton")
 let cuadroTexto = document.getElementById("txt_numero")
 
+let borrar = document.getElementById("borrar");
+
 let ancho = document.getElementById('ancho');
 let alto = document.getElementById('alto');
 
 
 boton.addEventListener('click', dibujoPorClick)
+borrar.addEventListener('click', borrarContenido);
 
 // Funcion para dibujar una linea recta
 function dibujarLinea(color, x1, y1, x2, y2){
@@ -51,4 +54,8 @@ function dibujoPorClick(){
     
         dibujarLinea("purple", xi, altoLienzo, anchoLienzo, yf);
     }
+}
+
+function borrarContenido(){
+    lienzo.clearRect(0, 0, canvas.width, canvas.height)
 }
